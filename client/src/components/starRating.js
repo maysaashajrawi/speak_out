@@ -42,9 +42,9 @@ const StarRating = () => {
   }
   const handleSubmit = ( e)=>{
     const id= window.localStorage.userId;
-    console.log(id,rating)
+    // console.log(id,rating)
     // e.preventDefault();
-    const {name ,value} = e.target;
+    // const {name ,value} = e.target;
     console.log(rating, "rattttttttttttttttttteee")
     // console
     axios.post( `http://localhost:5000/doctor/postRating/${id}`, {rating} )

@@ -46,11 +46,11 @@ function ScheduleForDoctor (){
               {doctorSchedule.schedules.map((schedule) =>(
               <tbody>
                
-                <td> {schedule.date}</td>
+                <td>{schedule.date}</td>
                 <td>{schedule.startAt}</td>
                 <td>{schedule.endAt}</td>
                 
-                </tbody>
+              </tbody>
               
             )
             )}
@@ -62,4 +62,5 @@ function ScheduleForDoctor (){
     )
 
 }
+
 export default ScheduleForDoctor;

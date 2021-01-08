@@ -23,5 +23,15 @@ module.exports = {
             if (err) { console.log("you are have an error in schedule controller ") }
             res.json(result);
         })
+    },
+    updateDisable:(req, res) => {
+        // var params = [req.body.doctor_Id , req.body.date];
+        var params = [req.params.id];
+        console.log(params , "form update disable")
+
+        scheduleModel.updateDisable(params, function (err, result) {
+            if (err) { console.log("you are have an error in schedule controller ") }
+            res.send(result);
+        })
     }
 }

@@ -1,10 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-//import DatePicker from "react-datepicker";
-import { Link } from "react-router-dom";
-
-
+import moment from 'moment';
+import ScheduleForDoctor from "./scheduleForDoctor"
 import "react-datepicker/dist/react-datepicker.css";
 function CreateDoctorsSchedule() {
   const [selectedDate, setSelectedDate] = useState({
@@ -13,8 +11,6 @@ function CreateDoctorsSchedule() {
     startTime: "",
     endTime: "",
   });
-
-  //const [today, setDate] = useState(new Date());
 
   const handleChange = (name) => (event) => {
     setSelectedDate({ ...selectedDate, [name]: event.target.value });
@@ -26,7 +22,7 @@ function CreateDoctorsSchedule() {
     axios
       .post(
         `http://localhost:5000/schedule/createSchedule/` +
-        `${window.localStorage.doctorId}`,
+          `${window.localStorage.doctorId}`,
         { selectedDate }
       )
       .then((res) => {
@@ -54,6 +50,7 @@ function CreateDoctorsSchedule() {
             selected={selectedDate}
             onChange={handleChange("date")}
             dateFormat="yyyy/MM/dd"
+            min={moment().format("YYYY-MM-DD")}
           />
         </div>
         <div className="form-group">
@@ -76,16 +73,14 @@ function CreateDoctorsSchedule() {
             onChange={handleChange("endTime")}
           />
         </div>
-        <button type="submit" onClick={handleClick}>
+        <button type="submit" className="btn btn-info btn-rounded mr-2 ml-2" onClick={handleClick}>
           Add to the Schedule{" "}
         </button>
       </form>
-      <Link
-            type="button"
-            className="btn btn-info btn-rounded mr-2 ml-2"
-            to={"/AppointmentListForOneDoctor/:id"}
-          >
-My Schedule          </Link>
+
+    <div>
+      <ScheduleForDoctor/>      
+    </div>
     </div>
 
 
