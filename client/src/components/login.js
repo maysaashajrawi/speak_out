@@ -71,12 +71,12 @@ function Login() {
     <div>
       <div
         className="container w-50 p-3 mt-5"
-        style={{ backgroundColor: "beige", borderRadius: "20px" }}
+        style={{ backgroundColor: "#E3F2FD", borderRadius: "20px" }}
       >
         <form className="form-group mr-5 ml-5" onSubmit={handleSubmit}>
           <br />
 
-          <h2>Login</h2>
+          <h2>Log In</h2>
           <br />
           <div className="form-group">
             {/* <label>Username</label> */}
@@ -96,7 +96,7 @@ function Login() {
               <div className="invalid-feedback">Username is required</div>
             )}
           </div>
-          <div style={{ color: "red" }}>{inputs.usernameError}</div>
+          <div style={{ color: "#E65100" }}>{inputs.usernameError}</div>
           <br></br>
           <div className="form-group">
             <BsLockFill size={20} />
@@ -114,7 +114,7 @@ function Login() {
               <div className="invalid-feedback">Password is required</div>
             )}
           </div>
-          <div style={{ color: "red" }}>{inputs.passwordError}</div>
+          <div style={{ color: "#E65100" }}>{inputs.passwordError}</div>
           <br></br>
           <label>Your Role </label>
           {/* radio buttons */}
@@ -152,7 +152,7 @@ function Login() {
           <div className="form-group text-center">
             <br></br>
 
-            <button className="btn btn-primary">
+            <button className="btn btn-info">
               {/* {loggingIn && <span className="spinner-border spinner-border-sm mr-1"></span>} */}
               Login
             </button>
@@ -163,18 +163,8 @@ function Login() {
           {/* buttons div end */}
         </form>
       </div>
-      {/* footer div */}
-      <div
-        className="container w-100 mt-5 mb-5"
-        style={{
-          textAlign: "center",
-          marginLeft: "auto",
-          marginRight: "auto",
-        }}
-      >
-        <Footer />
-      </div>
-      {/* footer div ends*/}
+
+      <Footer />
     </div>
   );
 }

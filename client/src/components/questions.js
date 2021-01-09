@@ -22,7 +22,7 @@ function QuestionsList() {
         className="container w-100"
         style={{
           textAlign: "left",
-          backgroundColor: "beige",
+          backgroundColor: "#E3F2FD",
           alignSelf: "center",
           width: "100%",
         }}
@@ -41,6 +41,8 @@ function QuestionsList() {
               borderColor: "blue",
               marginTop: 20,
               marginBottom: 20,
+              paddingTop: 10,
+              paddingBottom: 10,
             }}
           >
             {/* user */}
@@ -54,8 +56,11 @@ function QuestionsList() {
                 height: "auto",
               }}
             >
-              <FaCommentDots style={{ marginRight: 20 }} size={25} />
-              User: {questions.question}
+              <FaCommentDots
+                style={{ marginRight: 20, color: "#E65100" }}
+                size={25}
+              />
+              Question: {questions.question}
             </div>
             {/* doctor */}
             <div
@@ -69,8 +74,11 @@ function QuestionsList() {
                 height: "auto",
               }}
             >
-              <FaCommentMedical style={{ marginRight: 20 }} size={25} />
-              Dr. {questions.doctorName}: {questions.answer}
+              <FaCommentMedical
+                style={{ marginRight: 20, color: "#E65100" }}
+                size={25}
+              />
+              Answered by Dr. {questions.doctorName}: {questions.answer}
             </div>
           </div>
         ))}
@@ -81,18 +89,7 @@ function QuestionsList() {
       <br />
       <br />
 
-      {/* footer div */}
-      <div
-        className="container w-100 mt-5 mb-5"
-        style={{
-          textAlign: "center",
-          marginLeft: "auto",
-          marginRight: "auto",
-        }}
-      >
-        <Footer />
-      </div>
-      {/* footer div ends*/}
+      <Footer />
     </div>
   );
 }

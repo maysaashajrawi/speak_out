@@ -75,7 +75,6 @@ function Signup() {
       usernameError = "your username cannot be less than 3 characters!";
     }
 
-
     if (!user.email) {
       emailError =
         "your email cannot be blank, please try to write a correct email";
@@ -111,11 +110,11 @@ function Signup() {
     <di>
       <div
         className="container w-50 p-3 mt-5"
-        style={{ backgroundColor: "beige", borderRadius: "20px" }}
+        style={{ backgroundColor: "#E3F2FD", borderRadius: "20px" }}
       >
         <br />
         <form className="form-group mr-5 ml-5">
-          <h2>Signup</h2>
+          <h2>Sign Up</h2>
           <br />
           <div className="form-group ">
             <BsFillPersonFill size={20} />
@@ -134,7 +133,7 @@ function Signup() {
             {submitted && !user.userName && (
               <div className="invalid-feedback">Username is required</div>
             )}
-            <div style={{ color: "red" }}>{userE.usernameError}</div>
+            <div style={{ color: "#E65100" }}>{userE.usernameError}</div>
             <br></br>
           </div>
           <div className="form-group">
@@ -154,7 +153,7 @@ function Signup() {
               <div className="invalid-feedback">Age is required</div>
             )}
           </div>
-          <div style={{ color: "red" }}>{userE.ageError}</div>
+          <div style={{ color: "#E65100" }}>{userE.ageError}</div>
           <br></br>
           <div className="form-group">
             <CgGenderFemale size={20} style={{ marginRight: "0" }} />{" "}
@@ -175,7 +174,7 @@ function Signup() {
               <div className="invalid-feedback">gender is required</div>
             )}
           </div>
-          <div style={{ color: "red" }}>{userE.genderError}</div>
+          <div style={{ color: "#E65100" }}>{userE.genderError}</div>
           <br></br>
           <div className="form-group">
             <BsFillEnvelopeFill size={20} />
@@ -194,7 +193,7 @@ function Signup() {
               <div className="invalid-feedback">Email is required</div>
             )}
           </div>
-          <div style={{ color: "red" }}>{userE.emailError}</div>
+          <div style={{ color: "#E65100" }}>{userE.emailError}</div>
           <br></br>
           <div className="form-group">
             <BsLockFill size={20} />
@@ -214,13 +213,13 @@ function Signup() {
               <div className="invalid-feedback">Password is required</div>
             )}
           </div>
-          <div style={{ color: "red" }}>{userE.passwordError}</div>
+          <div style={{ color: "#E65100" }}>{userE.passwordError}</div>
           <br></br>
           {/* button div */}
           <div className="form-group text-center">
             <button
               type="submit"
-              className="btn btn-primary"
+              className="btn btn-info"
               onClick={handleSubmit}
             >
               {/* {registering && <span className="spinner-border spinner-border-sm mr-1"></span>} */}
@@ -232,18 +231,7 @@ function Signup() {
         </form>
       </div>
 
-      {/* footer div */}
-      <div
-        className="container w-100 mt-5 mb-5"
-        style={{
-          textAlign: "center",
-          marginLeft: "auto",
-          marginRight: "auto",
-        }}
-      >
-        <Footer />
-      </div>
-      {/* footer div ends*/}
+      <Footer />
     </di>
   );
 }
