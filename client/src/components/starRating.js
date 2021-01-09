@@ -3,7 +3,9 @@ import { FaStar } from "react-icons/fa";
 
 import axios from "axios";
 var ratingValue = 0;
+var doctorid ;
 const StarRating = () => {
+  // console.log(props.match.params,"props is ")
   const [rating, setRating] = useState({
       doctor_Id :"",
       rate : "",
@@ -37,7 +39,7 @@ const StarRating = () => {
     console.log(rating.doctorId , rating.rate);
     // console.log(e.target.value)
 
-    // console.log(rating.rate , ratingValue, "rattttttttttttttttttteee")
+    console.log(rating, "rattttttttttttttttttteee")
   
   }
   const handleSubmit = ( e)=>{
@@ -63,12 +65,14 @@ const StarRating = () => {
         <br />
         <label className=" ml-2 mr-2">Doctor Name: </label>
 
-        <select name="doctor_Id" value ={rating.doctor_Id} onChange = {handleChange}>
+         <select name="doctor_Id" value ={rating.doctor_Id} onChange = {handleChange}> 
           {doctors.doctor.map((oneDoctor) => (
+            
+
             <option value={oneDoctor.doctorId}>{oneDoctor.doctorName}</option>
          
          ))}
-        </select>
+        </select> 
       
         <br />
         <br />

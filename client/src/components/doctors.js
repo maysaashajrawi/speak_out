@@ -96,7 +96,7 @@ const Doctors = (props) => {
                     <div>
                   <Link
                     //'/updateDoctor/:id'
-                    to={`/rateDoctor`}
+                    to={`/rateDoctor/${doctor.doctorId}`}
                     className="btn btn-danger "
                     style={{
                       borderWidth: 1,
