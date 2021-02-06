@@ -20,7 +20,7 @@ This website is basically built because the psychological health for people arou
 # Logo:
 
 ​
-​<img src= "client/src/components/newLogo.PNG" width = "100">
+​<img src= "https://drive.google.com/file/d/1jYCVZg47OYXwXD8_LDp-ZIORHzV9nvmC/view?usp=sharing" width = "100">
 ![](client/src/components/newLogo.PNG)
 ​
 ​
