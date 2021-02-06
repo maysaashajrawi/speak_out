@@ -55,7 +55,7 @@ function Navbar() {
   function UserIsLogged2(val) {
     if (val) {
       return (
-        <Link to="/askQuestions" className="nav-link  ml-3 mr-3">
+        <Link to="/askQuestions" className="nav-link  ml-2 mr-2">
           <li className="nav-item"> SpeakOut to Us</li>
         </Link>
       );

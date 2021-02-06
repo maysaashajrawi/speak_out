@@ -3,10 +3,10 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import "react-datepicker/dist/react-datepicker.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import { bookAppointment } from "../actions/Appointment";
 import moment from 'moment';
-import $ from 'jquery'
+
 const url = "http://localhost:5000";
 function BookAppointment(props, { currentId, setCurrrentId }) {
   // console.log(props.match.params,"props is ")
@@ -91,18 +91,18 @@ var i = 0;
     // `<Redirect to={{ pathname: '/appointmentList/'+${window.localStorage.userId}, state: { from: ${props.location } }}/>`
   }
 
-  function handleDisable(id){
-    console.log('disable')
-  }
-  return (
-    <div className="col-lg-8 offset-lg-2">
-      <h2>BOOK Appointment</h2>
-      {/* <form name="form"> */}
-        {/* <div>
-                        <input type='hidden'  name ="user_Id" value={appointmentInfo.user_Id} onChange ={handleChange}></input>
-                        <input type='hidden'  name ="doctor_Id" value={appointmentInfo.doctor_Id} onChange ={handleChange}></input>
-                    </div> */}
 
+  return (
+    <div>
+      <div  className="container w-50 p-3 mt-5"
+        style={{
+          backgroundColor: "#E3F2FD",
+          borderRadius: "20px",
+          height: "250px",
+        }} >
+
+        <h2 className="text-center">Book a Video Session</h2>
+        <form name ="form" style={{ paddingRight: 4, paddingLeft: 4, paddingTop: 15 }}>
         <div className="form-group row">
           <label for="example-date-input" className="col-3 col-form-label">
             Date:
@@ -122,9 +122,10 @@ var i = 0;
           </div>
         </div>
 
-        <div className="form-group row">
+        <div className="form-group row style={{ paddingRight: 4, paddingLeft: 4, paddingTop: 15 }}">
           <label className="col-3 col-form-label">Appointment Time: </label>
-          <div class="col-9">
+          <div className="col-9">
+            
             <select
               id = "appointment"
               className="form-control"
@@ -156,41 +157,16 @@ var i = 0;
           </div>
         </div>
 
-              <div className="form-group">
+              <div className="form-group" 
+               style={{ textAlign: "center", marginTop: 30, marginBottom: 30 }}>
           <button className="btn btn-primary"  onClick = {() => { handleSubmit() }}>book Appointement</button>
         </div>
+        </form>
+       </div>
 
-        {/* table */}
-{/* 
-        <table className="table">
-              <thead className="thead-light">
-                <tr>
-                  
-                  <th>Time</th>
-                  <th>BOOK</th>
-                  
-                </tr>
-              </thead>
-          
-              {schedules.schedule.map((schedule) =>(
-              <tbody>
-               
-                <td>{schedule.startAt} - {schedule.endAt}</td>
-                <td><button className="btn btn-primary"  onClick = {() => { handleSubmit() }}>book Appointement</button></td>
-                
-                
-              </tbody>
-              
-            )
-            )}
-              
-            </table> */}
-
-              {/* table */}
+      </div>
+    
         
-        
-      {/* </form> */}
-    </div>
   );
 }
 export default BookAppointment;

@@ -69,40 +69,47 @@ const Home = () => {
         }}
       >
         {/* person1 */}
-        <Card border="primary" style={{ width: "33%" }}>
-          <Card.Header>
-            <h4>Christopher Hunt</h4>
-          </Card.Header>
-          <Card.Body>
-            <Card.Title>
-              <img
-                src={process.env.PUBLIC_URL + "./Images/person4.jpg"}
-                className="rounded-circle"
-                alt="woman avatar"
-                style={{ width: 150, height: 150 }}
-              />
-            </Card.Title>
-            <Card.Text>
-              "The biggest achievement I've made is, truly, fighting for myself.
-              Through working with Aiko and taking the time to discuss various
-              issues with her, I've become a bigger advocate for myself, and I'm
-              so proud of that."
-            </Card.Text>
-          </Card.Body>
-          {/* person2 */}
-        </Card>
-        <Card border="primary" style={{ width: "33%" }}>
+        <div className ="col-md-4 col-xs-12" style = {{margin: 0, padding: 0}}>
+          <Card border="primary">
+          
+            <Card.Header>
+              <h4>Christopher Hunt</h4>
+            </Card.Header>
+            <Card.Body>
+              <Card.Title>
+                <img
+                  src={process.env.PUBLIC_URL + "./Images/person4.jpg"}
+                  className="rounded-circle img-responsive mx-auto d-block"
+                  alt="woman avatar"
+
+                  style={{ width: 150, height: 150 }}
+                />
+              </Card.Title>
+              <Card.Text>
+                "The biggest achievement I've made is, truly, fighting for myself.
+                Through working with Aiko and taking the time to discuss various
+                issues with her, I've become a bigger advocate for myself, and I'm
+                so proud of that."
+              </Card.Text>
+            </Card.Body>
+            {/* person2 */}
+          </Card>
+        </div>
+        <div className ="col-md-4 col-xs-12" style = {{margin: 0, padding: 0}}>
+        <Card border="primary" >
           <Card.Header>
             <h4>Nicole Kirkpatrick</h4>
           </Card.Header>
           <Card.Body>
             <Card.Title>
+              <div className="text-center">
               <img
                 src={process.env.PUBLIC_URL + "./Images/person7.jpg"}
-                className="rounded-circle"
+                className="rounded-circle img-responsive mx-auto d-block"
                 alt="woman avatar"
                 style={{ width: 150, height: 150 }}
               />
+                </div>
             </Card.Title>
             <Card.Text>
               "I have now been working with Sheilah on BetterHelp for about 4
@@ -113,7 +120,9 @@ const Home = () => {
           </Card.Body>
           {/* person3 */}
         </Card>
-        <Card border="primary" style={{ width: "33%" }}>
+        </div>
+        <div className ="col-md-4 col-xs-12" style = {{margin: 0, padding: 0}}>
+        <Card border="primary" >
           <Card.Header>
             {" "}
             <h4>Mitchell Blocker</h4>
@@ -122,7 +131,7 @@ const Home = () => {
             <Card.Title>
               <img
                 src={process.env.PUBLIC_URL + "./Images/person3.jpg"}
-                className="rounded-circle"
+                className="rounded-circle img-responsive mx-auto d-block"
                 alt="woman avatar"
                 style={{ width: 150, height: 150 }}
               />
@@ -134,13 +143,14 @@ const Home = () => {
             </Card.Text>
           </Card.Body>
         </Card>
+        </div>
       </div>
       <div
         style={{
           width: "100%",
           textAlign: "center",
-          marginBottom: 60,
-          marginTop: 60,
+          // marginBottom: 60,
+          // marginTop: 60,
         }}
       >
         {/* Qoute starts */}
